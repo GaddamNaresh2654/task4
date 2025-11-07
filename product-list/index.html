@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - Shop Now</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Catalog</h1>
+            <p class="subtitle">Browse our amazing collection</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-section">
+                <h3>Filter by Category</h3>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="electronics">Electronics</button>
+                    <button class="filter-btn" data-category="clothing">Clothing</button>
+                    <button class="filter-btn" data-category="books">Books</button>
+                    <button class="filter-btn" data-category="home">Home</button>
+                </div>
+            </div>
+
+            <div class="price-filter-section">
+                <h3>Filter by Price</h3>
+                <div class="price-range">
+                    <label>
+                        <input type="radio" name="priceFilter" value="all" checked>
+                        All Prices
+                    </label>
+                    <label>
+                        <input type="radio" name="priceFilter" value="0-50">
+                        $0 - $50
+                    </label>
+                    <label>
+                        <input type="radio" name="priceFilter" value="50-100">
+                        $50 - $100
+                    </label>
+                    <label>
+                        <input type="radio" name="priceFilter" value="100+">
+                        $100+
+                    </label>
+                </div>
+            </div>
+
+            <div class="sort-section">
+                <h3>Sort By</h3>
+                <select id="sortSelect" class="sort-select">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating-high">Rating: High to Low</option>
+                    <option value="rating-low">Rating: Low to High</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-info">
+            <span id="resultsCount">0 products found</span>
+            <button id="clearFilters" class="clear-filters-btn">Clear All Filters</button>
+        </div>
+
+        <div id="productsGrid" class="products-grid"></div>
+
+        <div id="noResults" class="no-results">
+            <p>No products found matching your criteria. Try adjusting your filters.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
